@@ -4,6 +4,7 @@ def load_library(path)
   emoticons = YAML.load_file(path)
   emoticons.each do |names,signs|
     emoticons[names]={:english=>signs[0], :japanese=>signs[1]}
+binding.pry
   end
 end
 #binding.pry
@@ -19,6 +20,7 @@ def get_japanese_emoticon(path, english_emoticon)
        japface="Sorry, that emoticon was not found"
      end
       japface
+binding.pry
 end
 
 
@@ -34,4 +36,5 @@ def get_english_meaning(path, japanese_emoticon)
        english_meaning="Sorry, that emoticon was not found"
      end
       english_meaning
+      binding.pry
 end
